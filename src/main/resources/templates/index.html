@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <title>Hello Spring Security</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/static/layui/css/layui.css" th:href="@{/static/layui/css/layui.css}" />
+</head>
+<body>
+<h1>hello</h1>
+<p>Click <a th:href="@{/hello}">here</a> to see a greeting</p>
+</body>
+<script type="text/javascript" src="/static/layui/layui.js" th:src="@{/static/layui/layui.js}"></script>
+</html>

@@ -1,0 +1,16 @@
+config:
+  rocketmq:
+    namesrvAddr: 47.105.45.74:9876
+    producerGroupName: registered_user_group
+    transactionProducerGroupName: registered_user_transaction
+    consumerGroupName: registered_user_consumer_group
+    producerInstanceName: registered_user_producer_instance
+    consumerInstanceName: registered_user_consumer_instance
+    producerTranInstanceName: registered_user_producer_transacition
+    consumerBatchMaxSize: 1
+    consumerBroadcasting: false
+    subscribe[0]: user-topic:white
+    enableHistoryConsumer: false
+    enableOrderConsumer: false
+
+

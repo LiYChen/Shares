@@ -1,0 +1,96 @@
+spring:
+  ### 数据库连接
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    platform: mysql
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.105.45.74:3306/shares?useUnicode=true&characterEncoding=utf-8
+    username: lisen
+    password: Lyc123456//
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-wait-millis: 60000
+
+  ### 热部署
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+      exclude: WEB-INF/**
+
+  ### 邮箱
+  mail:
+    host: smtp.qq.com
+    username: 1196110841@qq.com
+    password: zxzwpjcswmkzjgaa
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls.enable: true
+          starttls.required: true
+
+  ###redis
+  redis:
+    host: 47.105.45.74
+    port: 6379
+    password: lisen123456
+    timeout: 10000ms
+    database: 0
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1ms
+
+  ### 配置thymeleaf
+  thymeleaf:
+    prefix: classpath:/templates/
+    check-template-location: true
+    cache: false
+    suffix: .html
+    encoding: utf-8
+    servlet:
+      content-type: text/html
+    mode: html5
+
+  ### 静态资源访问
+  mvc:
+    static-path-pattern: /static/**
+  resources:
+    static-locations: classpath:/static
+
+
+server:
+  port: 8080
+
+### mybatis配置
+mybatis-plus:
+  mapper-locations: mapper/*.xml
+  type-aliases-package: com.ls.shares.pojo
+  global-config:
+    db-config:
+      id-type: id_worker_str
+      field-strategy: not_null
+      capital-mode: true
+    refresh: true
+    sql-parser-cache: true
+
+### 日志级别
+logging:
+  level:
+     com.ls.shares.mapper : debug
+
+
+
+
+
+
+
+
+
+
+
+
